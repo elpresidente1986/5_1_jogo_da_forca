@@ -1,6 +1,6 @@
 # Jogo da Forca
 
-## Definição do problema
+## 5.1 Definição do problema
 
 Este projeto consiste em criar um jogo da forca em Python.
 
@@ -36,3 +36,29 @@ O jogador perde se atingir o limite máximo de tentativas sem descobrir a palavr
 ## Resumo
 
 Criar um programa em Python que permita ao utilizador jogar à forca, tentando descobrir uma palavra escondida através da introdução de letras, respeitando um limite máximo de tentativas.
+
+## 5.2 Recolha de requisitos
+
+Nesta fase foram definidos os requisitos do jogo da forca. Os requisitos funcionais indicam o que o programa deve fazer. Os requisitos não funcionais indicam como o programa deve funcionar.
+
+## Requisitos funcionais
+
+1. O programa deve escolher automaticamente uma palavra a partir de uma lista pré-definida.
+
+2. O programa deve apresentar a palavra escondida através de traços, sem mostrar as letras no início do jogo.
+
+3. O utilizador deve conseguir introduzir uma letra de cada vez.
+
+4. O programa deve verificar se a letra introduzida existe ou não na palavra escondida.
+
+5. Quando a letra estiver correta, o programa deve mostrar essa letra na posição certa.
+
+6. Quando a letra estiver errada, o programa deve retirar uma tentativa ao jogador e mostrar quantas tentativas ainda restam.
+
+## Requisitos não funcionais
+
+1. O programa deve ser simples e fácil de utilizar.
+
+2. O programa deve apresentar mensagens claras para orientar o utilizador durante o jogo.
+
+3. O programa deve ser executado no terminal, sem necessidade de interface gráfica.

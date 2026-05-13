@@ -62,3 +62,50 @@ Nesta fase foram definidos os requisitos do jogo da forca. Os requisitos funcion
 2. O programa deve apresentar mensagens claras para orientar o utilizador durante o jogo.
 
 3. O programa deve ser executado no terminal, sem necessidade de interface gráfica.
+
+## 5.3 Fluxograma — Jogo da Forca
+
+Nesta fase foi criado o fluxograma do jogo da forca, representando o funcionamento principal do algoritmo antes da programação.
+
+O fluxograma inclui o início do jogo, a escolha da palavra, o ciclo principal, a validação do input, as decisões sobre letras corretas ou erradas, as condições de vitória e derrota, e o fim do jogo.
+
+```mermaid
+flowchart TD
+    A([Início]) --> B[Escolher palavra aleatória]
+    B --> C[Definir tentativas = 6]
+    C --> D[Criar palavra escondida com traços]
+    D --> E[Mostrar palavra escondida e tentativas restantes]
+
+    E --> F{Ainda há tentativas e a palavra não foi descoberta?}
+
+    F -- Sim --> G[/Pedir uma letra ao utilizador/]
+    G --> H{Input é válido?}
+
+    H -- Não --> I[Mostrar mensagem de erro]
+    I --> E
+
+    H -- Sim --> J{Letra já foi usada?}
+
+    J -- Sim --> K[Informar que a letra já foi usada]
+    K --> E
+
+    J -- Não --> L[Guardar letra usada]
+    L --> M{Letra existe na palavra?}
+
+    M -- Sim --> N[Revelar letra na posição correta]
+    N --> O{Palavra completa?}
+
+    O -- Sim --> P[Mostrar mensagem de vitória]
+    P --> Q([Fim])
+
+    O -- Não --> E
+
+    M -- Não --> R[Retirar uma tentativa]
+    R --> S{Tentativas chegaram a zero?}
+
+    S -- Sim --> T[Mostrar mensagem de derrota e palavra correta]
+    T --> Q
+
+    S -- Não --> E
+
+    F -- Não --> Q([Fim])

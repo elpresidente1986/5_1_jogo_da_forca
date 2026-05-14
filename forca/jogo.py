@@ -25,20 +25,25 @@ def mostrar_palavra(palavra, letras_certas):
 
 
 def pedir_letra(letras_usadas):
-    # Pede uma letra ao utilizador
-    letra = input("Introduz uma letra: ").lower()
+    # Pede uma letra ao utilizador e trata possíveis erros
+    try:
+        letra = input("Introduz uma letra: ").strip().lower()
 
-    # Verifica se o utilizador introduziu apenas uma letra
-    if len(letra) != 1 or not letra.isalpha():
-        print("Erro: deves introduzir apenas uma letra.\n")
+        if len(letra) != 1:
+            raise ValueError("Deves introduzir apenas uma letra.")
+
+        if not letra.isalpha():
+            raise ValueError("Não são aceites números ou símbolos.")
+
+        if letra in letras_usadas:
+            raise ValueError("Essa letra já foi utilizada. Tenta outra.")
+
+        return letra
+
+    except ValueError as erro:
+        print("Erro:", erro)
+        print()
         return None
-
-    # Verifica se a letra já foi usada
-    if letra in letras_usadas:
-        print("Essa letra já foi utilizada. Tenta outra.\n")
-        return None
-
-    return letra
 
 
 def verificar_vitoria(palavra, letras_certas):

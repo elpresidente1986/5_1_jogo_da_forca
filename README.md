@@ -109,3 +109,35 @@ flowchart TD
     S -- Não --> E
 
     F -- Não --> Q([Fim])
+
+## 5.6 Testes
+
+Nesta fase foram definidos testes para validar o funcionamento do jogo da forca.
+
+O objetivo dos testes é confirmar se o programa responde corretamente a entradas válidas e inválidas, garantindo maior robustez e evitando erros durante a utilização.
+
+## Casos de teste válidos
+
+| Nº | Entrada | Resultado esperado | Resultado obtido |
+|---|---|---|---|
+| 1 | `a` | O programa aceita a letra e verifica se existe na palavra. | Conforme esperado |
+| 2 | `p` | O programa aceita a letra e atualiza a palavra ou as tentativas. | Conforme esperado |
+| 3 | `o` | O programa aceita a letra e continua o jogo. | Conforme esperado |
+| 4 | `t` | O programa aceita a letra e verifica se está correta. | Conforme esperado |
+| 5 | `m` | O programa aceita a letra e mantém o ciclo do jogo. | Conforme esperado |
+
+## Casos de teste inválidos
+
+| Nº | Entrada | Resultado esperado | Resultado obtido |
+|---|---|---|---|
+| 1 | `1` | O programa deve apresentar erro por não aceitar números. | Conforme esperado |
+| 2 | `@` | O programa deve apresentar erro por não aceitar símbolos. | Conforme esperado |
+| 3 | `ab` | O programa deve apresentar erro por ter mais de uma letra. | Conforme esperado |
+| 4 | campo vazio | O programa deve apresentar erro por não receber uma letra. | Conforme esperado |
+| 5 | letra repetida | O programa deve informar que a letra já foi usada. | Conforme esperado |
+
+## Tratamento de erros
+
+Foi implementado tratamento de erros com `try/except` na validação da letra introduzida pelo utilizador.
+
+Desta forma, o programa consegue identificar entradas inválidas, apresentar uma mensagem clara e continuar a execução sem terminar de forma inesperada.

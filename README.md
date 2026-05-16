@@ -291,3 +291,9 @@ Parabéns! Conseguiste descobrir a palavra: python
 ## Conclusão
 
 Com esta documentação, o projeto fica mais claro para outros utilizadores, permitindo perceber o funcionamento do jogo, as regras aplicadas e a forma correta de executar o programa.
+
+## Vídeo de apresentação
+
+Foi criado um vídeo de apresentação do projeto, onde é demonstrado o funcionamento do jogo da forca no terminal.
+
+O vídeo apresenta a execução do jogo, a introdução de letras, a validação das respostas e o resultado final.
